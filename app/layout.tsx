@@ -1,6 +1,5 @@
 import { Header } from '@/components/Header'
-import 'bootstrap/dist/css/bootstrap.css';
-import './globals.css'
+import '../globals.css';
 import type { Metadata } from 'next'
 import { Footer } from '@/components/Footer'
 
@@ -16,12 +15,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" style={{ height: '100%' }}>
+    <html lang="en">
       <body
-        className='container'
-        style={{ display: 'flex', flexDirection: 'column', height: '100%' }} suppressHydrationWarning={true}>
+        className='min-h-screen bg-slate-50 dark:bg-black dark:text-white flex flex-col ' suppressHydrationWarning={true}>
         <Header />
-        <main className='container' style={{ flex: 1 }}>
+        <main className='flex-1'>
           {children}
         </main>
         <Footer/>

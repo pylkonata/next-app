@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <h3>Select subitem</h3>
+    <h3 className="text-2xl mt-3">Select subitem</h3>
   )
 };
 

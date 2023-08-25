@@ -1,13 +1,18 @@
 import Link from 'next/link'
 import React from 'react'
+import { Navigation } from './Navigation';
+
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '/about' },
+];
 
 export const Header = () => {
   return (
-    <header>
-      <nav className="navbar" style={{ gap: '20px', justifyContent: 'center' }}>
-        <Link href='/'>Home</Link>
-        <Link href='/blog'>Blog</Link>
-        <Link href='/about'>About</Link>
+    <header className='bg-teal-700 text-white'>
+      <nav className="max-w-4xl mx-auto p-4 flex justify-center items-center gap-6 ">
+        <Navigation navLinks={navItems} />
       </nav>
     </header>
   )
